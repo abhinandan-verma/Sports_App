@@ -40,11 +40,15 @@ public class MainActivity extends AppCompatActivity {
         sportList.add(s6);
         sportList.add(s7);
 
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         adapter = new CustomAdapter(sportList);
-
-        //LayoutManager - responsible for positioning & measuring the items in recyclerView
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+
+
     }
+
+
 }
