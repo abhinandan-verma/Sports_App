@@ -1,6 +1,8 @@
 package com.example.sports_app;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -46,8 +48,11 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-
-
+    }
+    public void  onClick(View v,int pos){
+        Toast.makeText(this,
+                "you choose "+sportList.get(pos).getSportName(),
+                Toast.LENGTH_SHORT).show();
     }
 
 
